@@ -51,28 +51,45 @@ title: Home
       {% endfor %}
     </section>
 
-    <section class="content-section">
-      <h2>Selected Publications <a class="section-more" href="{{ '/publications/' | relative_url }}">All publications &rarr;</a></h2>
-      {% for pub in site.data.publications %}
-        <div class="pub-item">
-          <div class="pub-header">
-            <span class="pub-year">{{ pub.year }}</span>
-            <span class="pub-title">{{ pub.title }}</span>
+    <section class="content-section pub-section">
+      <h2 class="section-heading-bar">Selected publications</h2>
+      <div class="pub-box-card">
+        {% for pub in site.data.publications %}
+          <div class="pub-item">
+            <div class="pub-row">
+              <div class="pub-citation">
+                {{ pub.authors }} ({{ pub.year }}). {{ pub.title }}. <em>{{ pub.venue }}</em>.
+              </div>
+              <span class="pub-year-pill">{{ pub.year }}</span>
+            </div>
+
+            <div class="pub-actions">
+              {% if pub.doi %}
+                <a href="{{ pub.doi }}" target="_blank" class="pill-btn primary">DOI</a>
+              {% endif %}
+              {% if pub.code %}
+                <a href="{{ pub.code }}" target="_blank" class="pill-btn">CODE</a>
+              {% endif %}
+              {% if pub.slides %}
+                <a href="{{ pub.slides }}" target="_blank" class="pill-btn">SLIDES</a>
+              {% endif %}
+              <button type="button" class="pill-btn" onclick="toggleDrawer('bib-{{ pub.id }}')">BIB</button>
+              <button type="button" class="pill-btn" onclick="toggleDrawer('abs-{{ pub.id }}')">ABSTRACT</button>
+            </div>
+
+            <div id="bib-{{ pub.id }}" class="pub-drawer">
+              <pre>{{ pub.bibtex }}</pre>
+            </div>
+            <div id="abs-{{ pub.id }}" class="pub-drawer">
+              <p>{{ pub.abstract }}</p>
+            </div>
           </div>
-          <div class="pub-authors">{{ pub.authors }}</div>
-          <div class="pub-venue">{{ pub.venue }} ({{ pub.date }})</div>
-          <div class="pub-actions">
-            <button class="pill-btn" onclick="toggleDrawer('bib-{{ pub.id }}')">BIB</button>
-            <button class="pill-btn" onclick="toggleDrawer('abs-{{ pub.id }}')">Abstract</button>
-          </div>
-          <div id="bib-{{ pub.id }}" class="pub-drawer">
-            <pre>{{ pub.bibtex }}</pre>
-          </div>
-          <div id="abs-{{ pub.id }}" class="pub-drawer">
-            <p>{{ pub.abstract }}</p>
-          </div>
+        {% endfor %}
+
+        <div class="pub-card-footer">
+          <a href="{{ '/publications/' | relative_url }}">All publications &rarr;</a>
         </div>
-      {% endfor %}
+      </div>
     </section>
 
     <section class="content-section" style="border-bottom:none;">
