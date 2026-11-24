@@ -9,3 +9,13 @@
   highlights:
     - "Formulating high-resolution compressible CFD simulations to capture shock-induced shear layer roll-up and turbulent fuel-air mixing downstream of a strut injector."
     - "Quantifying spatial mixing efficiency, total pressure recovery, and vorticity deposition across varied fuel types and inlet stagnation temperatures."
+
+  - title: "Optimizing District Cooling system"
+  role: "Undergraduate Researcher"
+  advisor: "Dr. Dewan Hasan Ahmed"
+  institution: "Ahsanullah University of Science and Technology (AUST)"
+  period: "Ongoing"
+  image: "/assets/img/DCS.jpg"
+  caption: "District Cooling system with Stratified Tank."
+  tools: ["OpenModelica", "MATLAB"]
+  summary: "Concise 2–3 sentence overview of the physical problem, numerical/experimental m  
