@@ -1,0 +1,36 @@
+- title: "Designing the Landing Mechanism of a Solar-Powered UAV"
+  date: "April 2026"
+  category: "Structural & Fatigue Analysis (FEA)"
+  tools: ["SolidWorks", "ANSYS"]
+  summary: "Structural design, spring optimization, and fatigue life assessment of a lightweight landing gear assembly engineered for a 2.5 kg solar-powered unmanned aerial vehicle."
+  bullets:
+    - "Designed a custom spring-damped landing mechanism in SolidWorks tailored to absorb touch-down impact loads on a 2.5 kg solar UAV airframe."
+    - "Conducted finite element structural stress and cyclic fatigue simulations in ANSYS to verify safety factors under repeated landing cycles."
+
+- title: "Soft-Growing (Vine) Robot for Search-and-Rescue"
+  date: "September 2025"
+  category: "Soft Robotics & CAD/FEA"
+  tools: ["SolidWorks", "ANSYS", "Pneumatic Control Systems"]
+  summary: "Feasibility study, CAD prototyping, and pneumatic actuation modeling of an everting soft-growing vine robot capable of navigating constrained disaster environments."
+  bullets:
+    - "Conducted a feasibility study on tip-everting soft robots, bridging rigid-body kinematics with compliant soft-matter mechanics."
+    - "Engineered a CAD prototype for a motorized base-station reel mechanism to regulate material deployment and internal pneumatic pressure."
+    - "Simulated tip-extension trajectories to optimize payload mounting for cameras and environmental sensors in search-and-rescue scenarios."
+
+- title: "Technical Report on Reducing Neonatal Mortality in Bangladesh (SDG 3.2)"
+  date: "March 2025"
+  category: "Engineering Systems & Machine Learning"
+  tools: ["LaTeX", "Python (Random Forest)"]
+  summary: "Data-driven engineering proposal aligned with UN Sustainable Development Goal 3.2 to reduce Bangladesh's neonatal mortality rate (NMR) to 12 per 1,000 live births."
+  bullets:
+    - "Analyzed rural healthcare infrastructure disparities and thermal-regulation bottlenecks contributing to preventable neonatal deaths."
+    - "Proposed low-cost portable infant incubators integrated with a Random Forest machine learning model for early risk stratification and thermal monitoring."
+
+- title: "Autonomous Line-Following Robot"
+  date: "June 2023"
+  category: "Mechatronics & Control Systems"
+  tools: ["Microcontroller", "IR Sensor Array", "DC Gear Motors"]
+  summary: "End-to-end hardware fabrication and embedded feedback control programming for an autonomous path-tracking mobile robot."
+  bullets:
+    - "Developed closed-loop path-following control algorithms integrating optical sensor feedback with differential motor speed modulation."
+    - "Built and calibrated the chassis, gear drivetrain, and embedded microcontroller electronics."

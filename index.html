@@ -1,0 +1,113 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>{{ site.author.name }}</h1>
+      <p class="subtitle">{{ site.author.role }}, {{ site.author.institution }}</p>
+
+      <div class="tag-list">
+        {% for tag in site.research_tags %}
+          <a href="{{ '/research/' | relative_url }}" class="tag">{{ tag }}</a>
+        {% endfor %}
+      </div>
+
+      <p class="bio-text">
+        I am a final-year Mechanical Engineering undergraduate at Ahsanullah University of Science and Technology (GPA: 3.25/4.00, Expected 2027), seeking <strong>Graduate Research Assistant (GRA)</strong> opportunities in Computational Fluid Dynamics (CFD), Propulsion, and Thermo-Fluid Sciences. My undergraduate thesis, supervised by <strong>Prof. Dr. Fazlar Rahman</strong>, investigates shock-induced Richtmyer-Meshkov fuel mixing in supersonic scramjet combustors.
+      </p>
+
+      <div class="hero-links">
+        <a href="{{ site.author.cv_pdf | relative_url }}" class="btn-link primary" target="_blank">Download CV (PDF)</a>
+        <a href="mailto:{{ site.author.email }}" class="btn-link">Email</a>
+        <a href="{{ site.author.researchgate }}" class="btn-link" target="_blank">ResearchGate</a>
+        <a href="{{ site.author.linkedin }}" class="btn-link" target="_blank">LinkedIn</a>
+        <a href="{{ site.author.github }}" class="btn-link" target="_blank">GitHub</a>
+      </div>
+    </div>
+
+    <div>
+      <img src="{{ '/assets/img/profile.svg' | relative_url }}" alt="{{ site.author.name }}" class="profile-photo">
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <h2>Current Thesis &amp; Focus <a class="section-more" href="{{ '/research/' | relative_url }}">Full research &rarr;</a></h2>
+    {% for item in site.data.research %}
+      <div class="highlight-card">
+        <div class="meta">{{ item.period }} &middot; Supervisor: {{ item.advisor }}</div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.summary }}</p>
+        <div class="tag-list" style="margin-top:0.65rem; margin-bottom:0;">
+          {% for tool in item.tools %}
+            <span class="tag">{{ tool }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <h2>Selected Publications <a class="section-more" href="{{ '/publications/' | relative_url }}">All publications &rarr;</a></h2>
+    {% for pub in site.data.publications %}
+      <div class="pub-item">
+        <div class="pub-header">
+          <span class="pub-year">{{ pub.year }}</span>
+          <span class="pub-title">{{ pub.title }}</span>
+        </div>
+        <div class="pub-authors">{{ pub.authors }}</div>
+        <div class="pub-venue">{{ pub.venue }} ({{ pub.date }})</div>
+        <div class="pub-actions">
+          <button class="pill-btn" onclick="toggleDrawer('bib-{{ pub.id }}')">BIB</button>
+          <button class="pill-btn" onclick="toggleDrawer('abs-{{ pub.id }}')">Abstract</button>
+        </div>
+        <div id="bib-{{ pub.id }}" class="pub-drawer">
+          <pre>{{ pub.bibtex }}</pre>
+        </div>
+        <div id="abs-{{ pub.id }}" class="pub-drawer">
+          <p>{{ pub.abstract }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <h2>Selected Engineering Projects <a class="section-more" href="{{ '/projects/' | relative_url }}">All projects &rarr;</a></h2>
+    <div class="card-grid">
+      {% for proj in site.data.projects limit:2 %}
+        <div class="card">
+          <div class="card-meta">{{ proj.date }} &middot; {{ proj.category }}</div>
+          <h3>{{ proj.title }}</h3>
+          <p>{{ proj.summary }}</p>
+          <div class="tag-list" style="margin-bottom:0;">
+            {% for tool in proj.tools %}
+              <span class="tag">{{ tool }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="content-section" style="border-bottom:none;">
+  <div class="container">
+    <h2>News &amp; Milestones</h2>
+    <ul class="news-list">
+      {% for news in site.data.news %}
+        <li>
+          <span class="news-date">{{ news.date }}</span>
+          <span>{{ news.text }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

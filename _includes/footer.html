@@ -1,0 +1,39 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>About</h4>
+        <p><strong>{{ site.author.name }}</strong><br>
+        {{ site.author.role }}<br>
+        {{ site.author.institution }}<br>
+        {{ site.author.location }}</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+          <li>{{ site.author.phone }}</li>
+          <li><a href="{{ site.author.github }}" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Academic Links</h4>
+        <ul>
+          <li><a href="{{ site.author.researchgate }}" target="_blank">ResearchGate</a></li>
+          <li><a href="{{ site.author.linkedin }}" target="_blank">LinkedIn</a></li>
+          <li><a href="{{ site.author.cv_pdf | relative_url }}" target="_blank">Curriculum Vitae (PDF)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; {{ 'now' | date: "%Y" }} {{ site.author.name }}. Built with Jekyll &amp; SCSS for GitHub Pages.
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleDrawer(id) {
+  const el = document.getElementById(id);
+  if (el) el.classList.toggle('open');
+}
+</script>

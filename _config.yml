@@ -1,0 +1,38 @@
+title: Mohammad Nafis Irfan
+description: Mechanical Engineering Undergraduate & CFD Researcher | Prospective Research Assistant
+url: "https://nafisirfan.github.io"
+baseurl: ""
+
+author:
+  name: Mohammad Nafis Irfan
+  role: B.Sc. Candidate in Mechanical Engineering
+  institution: Ahsanullah University of Science and Technology (AUST)
+  location: Uttara, Dhaka-1230, Bangladesh
+  email: nafisirfan0000@gmail.com
+  phone: "+8801763279467"
+  linkedin: "https://www.linkedin.com/in/nafis-irfan/"
+  researchgate: "https://www.researchgate.net/profile/Nafis-Irfan-2?ev=prf_overview/"
+  github: "https://github.com/nafisirfan"
+  cv_pdf: "/assets/pdf/CV.pdf"
+
+research_tags:
+  - Computational Fluid Dynamics (CFD)
+  - Supersonic Combustion & Scramjets
+  - The Richtmyer–Meshkov instability (RMI)
+  - Aerodynamics
+  - Structural & Fatigue Analysis (FEA)
+  - Thermo-Fluid Systems
+  - District Cooling System
+
+markdown: kramdown
+permalink: /:title/
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+include:
+  - _pages

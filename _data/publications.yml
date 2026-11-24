@@ -1,0 +1,35 @@
+- id: irfan2025rocket
+  year: 2025
+  title: "Aerodynamic Comparison Analysis of Conic Rocket with Sounder Fin, Shark-Caved Fin, Straight Fin, Trapezoidal Fin in Subsonic Flow"
+  authors: "1st Author, <strong>M. N. Irfan</strong> (2nd Author)"
+  venue: "3rd International Conference on Mechanical Engineering and Applied Sciences (ICMEAS 2025)"
+  date: "July 2025"
+  status: "Conference Paper"
+  tags: ["Subsonic Aerodynamics", "CFD", "Rocket Fin Optimization"]
+  abstract: "A comparative computational fluid dynamics (CFD) investigation evaluating the subsonic aerodynamic performance—specifically lift, drag, and static stability characteristics—of a conic rocket configuration equipped with four distinct fin geometries: Sounder, Shark-Caved, Straight, and Trapezoidal fins."
+  bibtex: |
+    @inproceedings{irfan2025rocket,
+      title     = {Aerodynamic Comparison Analysis of Conic Rocket with Sounder Fin, Shark-Caved Fin, Straight Fin, Trapezoidal Fin in Subsonic Flow},
+      author    = {Irfan, Mohammad Nafis and Co-authors},
+      booktitle = {3rd International Conference on Mechanical Engineering and Applied Sciences (ICMEAS 2025)},
+      year      = {2025},
+      month     = {July}
+    }
+
+- id: irfan2025bsme
+  year: 2025
+  title: "Effect of Temperature-Resolved Sizing of Chilled-Water Storage in a District Cooling System"
+  authors: "1st Author, <strong>M. N. Irfan</strong> (2nd Author)"
+  venue: "The 10th BSME International Conference on Thermo-Fluid Engineering"
+  date: "July 2025"
+  status: "Conference Paper"
+  tags: ["Thermo-Fluid Engineering", "Thermal Energy Storage", "District Cooling"]
+  abstract: "Investigates temperature-resolved thermal stratification and sizing methodologies for chilled-water storage tanks to enhance peak-load shifting and thermodynamic efficiency in district cooling networks."
+  bibtex: |
+    @inproceedings{irfan2025bsme,
+      title     = {Effect of Temperature-Resolved Sizing of Chilled-Water Storage in a District Cooling System},
+      author    = {Irfan, Mohammad Nafis and Co-authors},
+      booktitle = {The 10th BSME International Conference on Thermo-Fluid Engineering},
+      year      = {2025},
+      month     = {July}
+    }

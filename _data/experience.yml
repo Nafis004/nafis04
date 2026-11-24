@@ -1,0 +1,29 @@
+- role: "Graphics & Content Director"
+  organization: "IMechE AUST Student Chapter"
+  location: "Dhaka, Bangladesh"
+  period: "Oct 2023 – Present"
+  bullets:
+    - "Directing visual communications, technical publications, and digital media strategy for the Institution of Mechanical Engineers (IMechE) student chapter."
+    - "Leading the design team for national engineering events, including organizing Mechnoverse: Beyond Gears and Gravity (Oct 2026)."
+
+- role: "Society Representative"
+  organization: "AUST Mechanical Society"
+  location: "Dhaka, Bangladesh"
+  period: "May 2023 – Present"
+  bullets:
+    - "Managed technical content and graphic design deliverables for departmental initiatives and student symposia."
+    - "Represented the AUST Mechanical Society across inter-university engineering forums."
+
+- role: "Verified Private Tutor"
+  organization: "Caretutor"
+  location: "Dhaka, Bangladesh"
+  period: "2023 – 2026"
+  bullets:
+    - "Mentored high school and college students in physics, mathematics, and Chemistry."
+
+- role: "Freelance Logo and Product Designer"
+  organization: "Fiverr"
+  location: "Remote"
+  period: "2019 – 2020"
+  bullets:
+    - "Delivered 3D CAD product renders, industrial object models, and brand identity packages for international clients."

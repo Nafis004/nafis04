@@ -1,0 +1,397 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-sans;
+  color: $color-text;
+  background-color: $color-bg;
+  line-height: 1.65;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $color-accent;
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: $color-accent-hover;
+    text-decoration: underline;
+  }
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Navbar */
+.site-header {
+  border-bottom: 1px solid $color-border;
+  background: rgba(255, 255, 255, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(6px);
+
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+  }
+
+  .site-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: $color-text;
+    letter-spacing: -0.01em;
+    &:hover { text-decoration: none; color: $color-accent; }
+  }
+
+  .site-nav {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+
+    a {
+      color: $color-muted;
+      font-size: 0.92rem;
+      font-weight: 500;
+      &:hover, &.active { color: $color-accent; text-decoration: none; }
+    }
+  }
+}
+
+/* Hero Section */
+.hero {
+  padding: 3.25rem 0 2.25rem;
+  border-bottom: 1px solid $color-border;
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 190px;
+    gap: 2.5rem;
+    align-items: start;
+
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  h1 {
+    font-size: 2.15rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+    margin-bottom: 0.35rem;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+    color: $color-muted;
+    margin-bottom: 1rem;
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .tag {
+    background: $color-tag-bg;
+    color: $color-tag-text;
+    border: 1px solid #dbeafe;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+  }
+
+  .bio-text {
+    color: $color-text;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+
+    .btn-link {
+      display: inline-block;
+      padding: 0.35rem 0.8rem;
+      font-size: 0.86rem;
+      font-weight: 500;
+      border: 1px solid $color-border;
+      border-radius: 5px;
+      color: $color-text;
+      background: $color-surface;
+
+      &:hover {
+        border-color: $color-accent;
+        color: $color-accent;
+        text-decoration: none;
+      }
+
+      &.primary {
+        background: $color-accent;
+        color: #ffffff;
+        border-color: $color-accent;
+        &:hover { background: $color-accent-hover; color: #ffffff; }
+      }
+    }
+  }
+
+  .profile-photo {
+    width: 185px;
+    height: 185px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid $color-border;
+    background: $color-surface;
+  }
+}
+
+/* Sections */
+section.content-section {
+  padding: 2.25rem 0;
+  border-bottom: 1px solid $color-border;
+
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    margin-bottom: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    .section-more {
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+  }
+}
+
+/* Highlight Box (Thesis) */
+.highlight-card {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-left: 4px solid $color-accent;
+  border-radius: 6px;
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1.25rem;
+
+  .meta {
+    font-size: 0.85rem;
+    color: $color-muted;
+    margin-bottom: 0.4rem;
+    font-family: $font-mono;
+  }
+
+  h3 {
+    font-size: 1.08rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    margin-top: 0.65rem;
+    padding-left: 1.25rem;
+    li { margin-bottom: 0.3rem; font-size: 0.94rem; }
+  }
+}
+
+/* Publications with interactive BIB / Abstract toggles */
+.pub-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px dashed $color-border;
+  &:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .pub-header {
+    display: flex;
+    gap: 0.75rem;
+    align-items: baseline;
+  }
+
+  .pub-year {
+    font-family: $font-mono;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $color-accent;
+    background: $color-tag-bg;
+    padding: 0.1rem 0.45rem;
+    border-radius: 4px;
+  }
+
+  .pub-title {
+    font-weight: 600;
+    font-size: 1.02rem;
+  }
+
+  .pub-authors {
+    font-size: 0.93rem;
+    color: $color-muted;
+    margin-top: 0.25rem;
+  }
+
+  .pub-venue {
+    font-size: 0.92rem;
+    font-style: italic;
+    color: $color-text;
+    margin-top: 0.15rem;
+  }
+
+  .pub-actions {
+    margin-top: 0.55rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    button.pill-btn {
+      font-family: $font-mono;
+      font-size: 0.76rem;
+      padding: 0.2rem 0.55rem;
+      border: 1px solid $color-border;
+      background: $color-bg;
+      color: $color-text;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        border-color: $color-accent;
+        color: $color-accent;
+      }
+    }
+  }
+
+  .pub-drawer {
+    display: none;
+    margin-top: 0.65rem;
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: 5px;
+    padding: 0.85rem 1rem;
+    font-size: 0.86rem;
+
+    &.open { display: block; }
+
+    pre {
+      font-family: $font-mono;
+      font-size: 0.8rem;
+      white-space: pre-wrap;
+      overflow-x: auto;
+    }
+  }
+}
+
+/* News Table */
+.news-list {
+  list-style: none;
+  li {
+    display: grid;
+    grid-template-columns: 145px 1fr;
+    gap: 1rem;
+    padding: 0.45rem 0;
+    font-size: 0.94rem;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+      gap: 0.15rem;
+    }
+
+    .news-date {
+      font-family: $font-mono;
+      font-size: 0.84rem;
+      color: $color-muted;
+    }
+  }
+}
+
+/* Cards Grid for Projects & Skills */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.15rem;
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  border: 1px solid $color-border;
+  border-radius: 6px;
+  padding: 1.15rem;
+  background: $color-bg;
+
+  .card-meta {
+    font-family: $font-mono;
+    font-size: 0.78rem;
+    color: $color-muted;
+    margin-bottom: 0.3rem;
+  }
+
+  h3 {
+    font-size: 1.02rem;
+    margin-bottom: 0.45rem;
+  }
+
+  p {
+    font-size: 0.91rem;
+    color: $color-muted;
+    margin-bottom: 0.65rem;
+  }
+
+  ul {
+    padding-left: 1.15rem;
+    font-size: 0.89rem;
+    li { margin-bottom: 0.25rem; }
+  }
+}
+
+/* Footer */
+.site-footer {
+  padding: 2.25rem 0;
+  font-size: 0.88rem;
+  color: $color-muted;
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1.5rem;
+
+    @media (max-width: 650px) {
+      grid-template-columns: 1fr;
+    }
+
+    h4 {
+      color: $color-text;
+      font-size: 0.92rem;
+      margin-bottom: 0.45rem;
+    }
+
+    ul {
+      list-style: none;
+      li { margin-bottom: 0.25rem; }
+    }
+  }
+
+  .copyright {
+    margin-top: 1.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid $color-border;
+    font-size: 0.82rem;
+  }
+}
