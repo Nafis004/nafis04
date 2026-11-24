@@ -18,4 +18,4 @@
   image: "/assets/img/DCS.jpg"
   caption: "District Cooling system with Stratified Tank."
   tools: ["OpenModelica", "MATLAB"]
-  summary: "Concise 2–3 sentence overview of the physical problem, numerical/experimental m  
+  summary: "District cooling (DC) is defined as a system that generates and distributes cold energy to meet the cooling needs of connected buildings, primarily using chilled water circulated through a network of pipes. It offers advantages over traditional air conditioning by providing better efficiency and a longer life cycle through a central chiller plant."  
