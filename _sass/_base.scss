@@ -372,65 +372,143 @@ section.content-section {
 }
 
 /* Publications */
-.pub-item {
-  margin-bottom: 1.35rem;
-  padding-bottom: 1.15rem;
-  border-bottom: 1px dashed $color-border;
-  &:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+/* Publications */
+.pub-section {
+  .section-heading-bar {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.45rem;
+    margin-bottom: 1.35rem;
 
-  .pub-header {
-    display: flex;
-    gap: 0.65rem;
-    align-items: baseline;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 28px;
+      height: 2.5px;
+      background: $color-accent;
+      border-radius: 2px;
+    }
+  }
+}
+
+.pub-box-card {
+  background: $color-bg;
+  border: 1px solid $color-border;
+  border-radius: 12px;
+  padding: 1.65rem 1.75rem;
+  box-shadow: 0 2px 12px rgba(30, 64, 175, 0.04);
+}
+
+.pub-item {
+  margin-bottom: 1.65rem;
+  padding-bottom: 1.45rem;
+  border-bottom: 1px solid $color-border;
+
+  &:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.25rem;
   }
 
-  .pub-year {
+  .pub-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .pub-citation {
+    font-size: 0.93rem;
+    line-height: 1.6;
+    color: $color-text;
+
+    strong {
+      font-weight: 700;
+    }
+
+    em {
+      font-style: italic;
+    }
+  }
+
+  .pub-year-pill {
+    flex-shrink: 0;
     font-family: $font-mono;
-    font-size: 0.82rem;
+    font-size: 0.74rem;
     font-weight: 600;
     color: $color-accent;
-    background: $color-tag-bg;
-    padding: 0.1rem 0.45rem;
-    border-radius: 4px;
+    background: $color-surface;
+    border: 1px solid $color-accent;
+    padding: 0.16rem 0.65rem;
+    border-radius: 999px;
   }
 
-  .pub-title { font-weight: 600; font-size: 0.98rem; }
-  .pub-authors { font-size: 0.9rem; color: $color-muted; margin-top: 0.2rem; }
-  .pub-venue { font-size: 0.88rem; font-style: italic; color: $color-text; margin-top: 0.1rem; }
-
   .pub-actions {
-    margin-top: 0.5rem;
+    margin-top: 0.7rem;
     display: flex;
     gap: 0.45rem;
+    flex-wrap: wrap;
 
-    button.pill-btn {
-      font-family: $font-mono;
-      font-size: 0.75rem;
-      padding: 0.18rem 0.5rem;
+    .pill-btn {
+      display: inline-block;
+      font-family: $font-sans;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.24rem 0.72rem;
       border: 1px solid $color-border;
-      background: $color-surface;
-      color: $color-text;
-      border-radius: 4px;
+      background: $color-bg;
+      color: $color-muted;
+      border-radius: 999px;
       cursor: pointer;
+      text-decoration: none;
+      transition: all 0.15s ease;
 
       &:hover {
         border-color: $color-accent;
         color: $color-accent;
+        text-decoration: none;
+      }
+
+      &.primary {
+        background: $color-text;
+        border-color: $color-text;
+        color: #ffffff;
+
+        &:hover {
+          background: $color-accent;
+          border-color: $color-accent;
+          color: #ffffff;
+        }
       }
     }
   }
 
   .pub-drawer {
     display: none;
-    margin-top: 0.6rem;
+    margin-top: 0.75rem;
     background: $color-surface;
     border: 1px solid $color-border;
-    border-radius: 5px;
-    padding: 0.8rem 0.95rem;
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
     font-size: 0.85rem;
 
     &.open { display: block; }
     pre { font-family: $font-mono; font-size: 0.78rem; white-space: pre-wrap; overflow-x: auto; }
+  }
+}
+
+.pub-card-footer {
+  margin-top: 1.15rem;
+  padding-top: 0.35rem;
+
+  a {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: $color-accent;
   }
 }
 
