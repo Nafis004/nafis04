@@ -1,21 +1,17 @@
-- id: irfan2025rocket
+- id: "irfan2025rocket"
   year: 2025
   title: "Aerodynamic Comparison Analysis of Conic Rocket with Sounder Fin, Shark-Caved Fin, Straight Fin, Trapezoidal Fin in Subsonic Flow"
-  authors: "1st Author, <strong>Mohmmad Nafis Irfan</strong> (2nd Author)"
+  authors: "1st Author, <strong>Mohammad Nafis Irfan</strong> (2nd Author)"
   venue: "3rd International Conference on Mechanical Engineering and Applied Sciences (ICMEAS 2025)"
   date: "July 2025"
   status: "Conference Paper"
   tags: ["Subsonic Aerodynamics", "CFD", "Rocket Fin Optimization"]
-    }
 
-- id: irfan2025bsme
+- id: "irfan2025bsme"
   year: 2025
   title: "Effect of Temperature-Resolved Sizing of Chilled-Water Storage in a District Cooling System"
-  authors: "1st Author, <strong>Mohmmad Nafis Irfan</strong> (2nd Author)"
+  authors: "1st Author, <strong>Mohammad Nafis Irfan</strong> (2nd Author)"
   venue: "The 10th BSME International Conference on Thermo-Fluid Engineering"
   date: "July 2025"
   status: "Conference Paper"
   tags: ["Thermo-Fluid Engineering", "Thermal Energy Storage", "District Cooling"]
-  abstract: "Investigates temperature-resolved thermal stratification and sizing methodologies for chilled-water storage tanks to enhance peak-load shifting and thermodynamic efficiency in district cooling networks."
- 
-    }
