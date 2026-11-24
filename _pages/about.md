@@ -15,7 +15,7 @@ permalink: /about/
     <div class="highlight-card">
       <div class="meta">Oct 2023 – Expected 2027 &middot; Dhaka, Bangladesh</div>
       <h3>B.Sc. in Mechanical Engineering</h3>
-      <p>Ahsanullah University of Science and Technology (AUST) &mdash; GPA: 3.25 / 4.00</p>
+      <p>Ahsanullah University of Science and Technology (AUST)</p>
     </div>
 
     <h2 style="margin-top:2rem;">Technical Skills &amp; Software</h2>
