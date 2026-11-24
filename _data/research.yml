@@ -10,7 +10,7 @@
     - "Formulating high-resolution compressible CFD simulations to capture shock-induced shear layer roll-up and turbulent fuel-air mixing downstream of a strut injector."
     - "Quantifying spatial mixing efficiency, total pressure recovery, and vorticity deposition across varied fuel types and inlet stagnation temperatures."
 
-  - title: "Optimizing District Cooling system"
+- title: "Optimizing District Cooling System"
   role: "Undergraduate Researcher"
   advisor: "Dr. Dewan Hasan Ahmed"
   institution: "Ahsanullah University of Science and Technology (AUST)"
@@ -18,4 +18,4 @@
   image: "/assets/img/DCS.jpg"
   caption: "District Cooling system with Stratified Tank."
   tools: ["OpenModelica", "MATLAB"]
-  summary: "District cooling (DC) is defined as a system that generates and distributes cold energy to meet the cooling needs of connected buildings, primarily using chilled water circulated through a network of pipes. It offers advantages over traditional air conditioning by providing better efficiency and a longer life cycle through a central chiller plant."  
+  summary: "District cooling (DC) is defined as a system that generates and distributes cold energy to meet the cooling needs of connected buildings, primarily using chilled water circulated through a network of pipes. It offers advantages over traditional air conditioning by providing better efficiency and a longer life cycle through a central chiller plant."
