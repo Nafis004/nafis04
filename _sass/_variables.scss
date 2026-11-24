@@ -1,14 +1,13 @@
 $font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 $font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-$color-bg: #ffffff;
-$color-surface: #f8fafc;
-$color-border: #e2e8f0;
-$color-text: #0f172a;
-$color-muted: #475569;
-$color-accent: #1d4ed8; // Academic navy-blue
-$color-accent-hover: #1e40af;
-$color-tag-bg: #eff6ff;
-$color-tag-text: #1e3a8a;
-
+$color-bg: #f0f6ff;        // Soft ice-blue page background
+$color-surface: #ffffff;   // Crisp white cards & highlight boxes
+$color-border: #bfdbfe;    // Clean sky-blue borders
+$color-text: #0f172a;      // Deep navy-slate body text
+$color-muted: #334155;     // Secondary slate-blue text
+$color-accent: #1e40af;    // Classic university royal/navy blue
+$color-accent-hover: #1e3a8a;
+$color-tag-bg: #dbeafe;    // Light blue tag pills
+$color-tag-text: #1e3a8a;  // Deep navy tag text
 $max-width: 920px;
