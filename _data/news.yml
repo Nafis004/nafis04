@@ -6,6 +6,6 @@
   text: "Completed CAD prototyping and pneumatic simulation study for a soft-growing (vine) search-and-rescue robot."
 - date: "July 2025"
   text: "Presented two co-authored conference papers at <strong>ICMEAS 2025</strong> (Rocket Fin Subsonic Aerodynamics) and the <strong>10th BSME International Conference on Thermo-Fluid Engineering</strong> (District Cooling Storage)."
-- date: "November 2026"
+- date: "November 2025"
   text: "A CFD simulation of supersonic flow over the SR-71 Blackbird, with the Mach number assumed to be 1.3. This involved modeling compressible flow conditions around the aircraft.."
-  image: "/assets/img/SR71.jpg"
+  image: "/assets/img/SR71.jpeg"
