@@ -8,10 +8,7 @@ permalink: /about/
   <div class="container">
     <h2>About Me</h2>
     <p style="margin-bottom:1rem;">
-      I am a Mechanical Engineering undergraduate at <strong>Ahsanullah University of Science and Technology (AUST)</strong> in Dhaka, Bangladesh (CGPA: <strong>3.25 / 4.00</strong>, Expected Graduation: 2027). My academic focus lies at the intersection of <strong>Computational Fluid Dynamics (CFD)</strong>, high-speed compressible flows, aerospace propulsion, and finite element structural simulation.
-    </p>
-    <p style="margin-bottom:1.5rem;">
-      Currently, I am conducting my undergraduate thesis under <strong>Prof. Dr. Fazlar Rahman</strong> on shock-induced Richtmyer-Meshkov fuel mixing in scramjet combustors. Alongside research, I serve as Graphics &amp; Content Director for the IMechE AUST Student Chapter and Society Representative for the AUST Mechanical Society.
+     Hi, I’m Mohammad Nafis Irfan—an aspiring aerospace engineer currently in my final year of undergraduate studies in Mechanical Engineering at Ahsanullah University of Science and Technology (AUST). While building a strong foundation across core mechanical systems, my primary passion lies in aerospace—specifically the physics of flight, computational fluid dynamics (CFD), and high-speed propulsion, Cooling/Heating system and aerodynamics.
     </p>
 
     <h2>Education</h2>
