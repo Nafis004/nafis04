@@ -334,7 +334,7 @@ section.content-section {
   border: 1px solid $color-border;
   border-radius: 6px;
   padding: 1.15rem;
-  background: $color-bg;
+  background: $color-surface;
 
   .card-meta {
     font-family: $font-mono;
@@ -394,30 +394,31 @@ section.content-section {
     border-top: 1px solid $color-border;
     font-size: 0.82rem;
   }
+}
+
+/* Project & Thesis Figures / Videos */
 .media-box {
   margin: 1rem 0 0.5rem;
   max-width: 680px;
-  border: 1px solid #bfdbfe;
+  border: 1px solid $color-border;
   border-radius: 6px;
   overflow: hidden;
-  background: #ffffff;
-}
+  background: $color-surface;
 
-.media-box img,
-.media-box video {
-  display: block;
-  width: 100%;
-  max-height: 280px;
-  object-fit: contain;
-  background: #0f172a;
-}
+  img,
+  video {
+    display: block;
+    width: 100%;
+    max-height: 280px;
+    object-fit: contain;
+    background: #0f172a;
+  }
 
-.media-box figcaption {
-  padding: 0.45rem 0.75rem;
-  font-size: 0.82rem;
-  color: #334155;
-  background: #f0f6ff;
-  border-top: 1px solid #bfdbfe;
- }
+  figcaption {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.82rem;
+    color: $color-muted;
+    background: $color-bg;
+    border-top: 1px solid $color-border;
+  }
 }
-
