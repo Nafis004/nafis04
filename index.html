@@ -3,33 +3,143 @@ layout: default
 title: Home
 ---
 
+---
+layout: default
+---
+
 <div class="container page-two-col">
+  <!-- LEFT COLUMN -->
   <div class="main-col">
+    <!-- 1. Introduction Block -->
     <div class="main-intro-wrap">
       <header class="intro-header">
-        <!-- Your H1, subtitle, pill-tags, and bio-text -->
+        <h1>Mohammad Nafis Irfan</h1>
+        <p class="subtitle">Mechanical Engineering, Ahsanullah University of Science and Technology (AUST)</p>
+
+        <div class="pill-tags">
+          <span class="pill-tag">Computational Fluid Dynamics (CFD)</span>
+          <span class="pill-tag">Supersonic Combustion &amp; Scramjets</span>
+          <span class="pill-tag">The Richtmyer–Meshkov instability (RMI)</span>
+          <span class="pill-tag">Aerodynamics</span>
+          <span class="pill-tag">Thermo-Fluid Systems</span>
+          <span class="pill-tag">District Cooling System</span>
+        </div>
+
+        <p class="bio-text">
+          I am a Mechanical Engineering student passionate about <strong>aerospace</strong>, specializing in <strong>aerodynamics</strong>, <strong>propulsion systems</strong>, and <strong>Computational Fluid Dynamics (CFD)</strong>. My current research spans two thermo-fluid and energy systems projects: simulating shock-induced Richtmyer-Meshkov instability (RMI) in supersonic scramjet combustors using OpenFOAM and ANSYS Fluent to evaluate fuel mixing and total pressure recovery, and modeling centralized district cooling networks with stratified thermal energy storage in OpenModelica and MATLAB to optimize plant load-shifting and energy efficiency.
+        </p>
       </header>
     </div>
 
+    <!-- 2. Research & Selected Publications -->
     <div class="main-body-wrap">
-      <!-- Your Research & Selected Publications sections -->
+      <!-- Current Thesis & Ongoing Research -->
+      <section class="content-section">
+        <h2>
+          Current Thesis &amp; Ongoing Research
+          <a href="{{ '/research/' | relative_url }}" class="section-more">Full research &rarr;</a>
+        </h2>
+
+        <div class="highlight-card">
+          <div class="meta">Ongoing (Expected Graduation: 2027) &middot; Supervisor: Prof. Dr. Fazlar Rahman</div>
+          <h3>Effect of Fuel Type and Temperature on Shock-Induced Richtmyer-Meshkov Mixing of a Strut-Injected Fuel Layer in a Scramjet Combustor</h3>
+          <p>
+            Investigating shock-wave/fuel-jet interactions and baroclinic vorticity generation driving Richtmyer-Meshkov instability (RMI) in supersonic scramjet combustors. Evaluating how fuel species properties and injection temperatures govern molecular mixing efficiency and flameholding potential.
+          </p>
+
+          <figure class="media-box">
+            <img src="{{ '/assets/img/scramjet.png' | relative_url }}" alt="Scramjet CFD Simulation">
+          </figure>
+
+          <div class="tag-list">
+            <span class="tag">OpenFOAM</span>
+            <span class="tag">ANSYS Fluent</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Selected Publications -->
+      <section class="content-section pub-section">
+        <h2 class="section-heading-bar">Selected publications</h2>
+
+        <div class="pub-box-card">
+          {% for pub in site.data.publications %}
+            <div class="pub-item">
+              <div class="pub-row">
+                <div class="pub-citation">
+                  {{ pub.authors }}. <strong>{{ pub.title }}</strong>. <em>{{ pub.venue }}</em>.
+                </div>
+                {% if pub.year %}
+                  <span class="pub-year-pill">{{ pub.year }}</span>
+                {% endif %}
+              </div>
+
+              {% if pub.pdf or pub.code or pub.doi or pub.url %}
+                <div class="pub-actions">
+                  {% if pub.pdf %}
+                    <a href="{{ pub.pdf | relative_url }}" class="pill-btn primary" target="_blank">PDF</a>
+                  {% endif %}
+                  {% if pub.doi %}
+                    <a href="{{ pub.doi }}" class="pill-btn" target="_blank">DOI</a>
+                  {% endif %}
+                  {% if pub.url %}
+                    <a href="{{ pub.url }}" class="pill-btn" target="_blank">LINK</a>
+                  {% endif %}
+                  {% if pub.code %}
+                    <a href="{{ pub.code }}" class="pill-btn" target="_blank">CODE</a>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+
+          <div class="pub-card-footer">
+            <a href="{{ '/publications/' | relative_url }}">View all publications &rarr;</a>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 
+  <!-- RIGHT SIDEBAR -->
   <aside class="sidebar-col">
+    <!-- Box 1: Profile Card -->
     <div class="profile-card">
-      <!-- Profile photo, name, links, education -->
+      <img src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="{{ site.title }}" class="avatar-circle">
+      <div class="sidebar-name">Mohammad Nafis Irfan</div>
+      <div class="sidebar-role">Mechanical Engineering</div>
+      <div class="sidebar-inst">Ahsanullah University of Science and Technology (AUST)</div>
+
+      <div class="sidebar-links">
+        <a href="mailto:nafisirfan04@gmail.com">Email</a>
+        <a href="{{ '/assets/pdf/cv.pdf' | relative_url }}" target="_blank">CV</a>
+        <a href="https://github.com/Nafis04" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/mohammad-nafis-irfan/" target="_blank">LinkedIn</a>
+        <a href="https://www.researchgate.net/" target="_blank">RG</a>
+      </div>
+
+      <ul class="sidebar-edu">
+        <li>(2026) B.Sc. Mechanical Engineering, AUST</li>
+      </ul>
     </div>
 
+    <!-- Box 2: Separate News Card -->
     <div class="sidebar-news">
-      <!-- News list -->
+      <h3>News</h3>
+      <ul class="sidebar-news-list">
+        {% for item in site.data.news %}
+          <li>
+            <span class="news-date">{{ item.date }}</span>
+            <p>{{ item.text }}</p>
+            {% if item.image %}
+              <img src="{{ item.image | relative_url }}" alt="{{ item.date }}" class="news-thumb">
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
     </div>
   </aside>
 </div>
-
-      <p class="bio-text">
-        I am a Mechanical Engineering student passionate about <strong>aerospace </strong>, specializing in <strong>aerodynamics</strong>, <strong>propulsion systems</strong>, and <strong>Computational Fluid Dynamics (CFD)</strong>. My current research spans two thermo-fluid and energy systems projects: simulating shock-induced Richtmyer-Meshkov instability (RMI) insupersonic scramjet combustors using OpenFOAM and ANSYS Fluent to evaluate fuel mixing and total pressure recovery, and modeling centralized district cooling networks with stratified thermal energy storage in OpenModelica and MATLAB to optimize plant load-shifting and energy efficiency.
-      </p>
     
 
     <section class="content-section">
