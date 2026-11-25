@@ -4,17 +4,28 @@ title: Home
 ---
 
 <div class="container page-two-col">
-  <!-- LEFT MAIN COLUMN -->
-  <main class="main-col">
-    <header class="intro-header">
-      <h1>{{ site.author.name }}</h1>
-      <p class="subtitle">{{ site.author.role }}, {{ site.author.institution }}</p>
+  <div class="main-col">
+    <div class="main-intro-wrap">
+      <header class="intro-header">
+        <!-- Your H1, subtitle, pill-tags, and bio-text -->
+      </header>
+    </div>
 
-      <div class="pill-tags">
-        {% for tag in site.research_tags %}
-          <a href="{{ '/research/' | relative_url }}" class="pill-tag">{{ tag }}</a>
-        {% endfor %}
-      </div>
+    <div class="main-body-wrap">
+      <!-- Your Research & Selected Publications sections -->
+    </div>
+  </div>
+
+  <aside class="sidebar-col">
+    <div class="profile-card">
+      <!-- Profile photo, name, links, education -->
+    </div>
+
+    <div class="sidebar-news">
+      <!-- News list -->
+    </div>
+  </aside>
+</div>
 
       <p class="bio-text">
         I am a Mechanical Engineering student passionate about <strong>aerospace </strong>, specializing in <strong>aerodynamics</strong>, <strong>propulsion systems</strong>, and <strong>Computational Fluid Dynamics (CFD)</strong>. My current research spans two thermo-fluid and energy systems projects: simulating shock-induced Richtmyer-Meshkov instability (RMI) insupersonic scramjet combustors using OpenFOAM and ANSYS Fluent to evaluate fuel mixing and total pressure recovery, and modeling centralized district cooling networks with stratified thermal energy storage in OpenModelica and MATLAB to optimize plant load-shifting and energy efficiency.
