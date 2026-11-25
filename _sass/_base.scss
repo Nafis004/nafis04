@@ -216,7 +216,7 @@ a {
 .sidebar-col {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  gap: 1.5rem;
 
   @media (max-width: 820px) {
     order: -1;
@@ -224,12 +224,13 @@ a {
 }
 
 .profile-card {
-  background: $color-surface;
+  background: #ffffff;
   border: 1px solid $color-border;
-  border-radius: 10px;
-  padding: 1.65rem 1.25rem;
+  border-top: 4px solid $color-accent;
+  border-radius: 12px;
+  padding: 1.75rem 1.35rem;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(30, 64, 175, 0.05);
+  box-shadow: 0 4px 16px rgba(30, 64, 175, 0.05);
 
   .avatar-circle {
     width: 140px;
@@ -242,7 +243,7 @@ a {
   }
 
   .sidebar-name {
-    font-size: 1.15rem;
+    font-size: 1.18rem;
     font-weight: 700;
     color: $color-text;
     margin-bottom: 0.2rem;
@@ -273,7 +274,7 @@ a {
       font-weight: 600;
       padding: 0.22rem 0.55rem;
       border-radius: 4px;
-      background: $color-bg;
+      background: $color-surface;
       border: 1px solid $color-border;
       color: $color-accent;
 
@@ -299,24 +300,33 @@ a {
 }
 
 .sidebar-news {
+  background: #ffffff;
+  border: 1px solid $color-border;
+  border-radius: 12px;
+  padding: 1.5rem 1.35rem;
+  box-shadow: 0 4px 16px rgba(30, 64, 175, 0.05);
+
   h3 {
-    font-size: 1.05rem;
+    font-size: 1.08rem;
     font-weight: 700;
-    margin-bottom: 0.85rem;
+    margin-bottom: 1rem;
     color: $color-text;
+    text-align: left;
   }
 
   .sidebar-news-list {
     list-style: none;
+    text-align: left;
 
     li {
       margin-bottom: 1rem;
-      padding-bottom: 0.85rem;
+      padding-bottom: 0.9rem;
       border-bottom: 1px solid $color-border;
 
       &:last-child {
         border-bottom: none;
         margin-bottom: 0;
+        padding-bottom: 0;
       }
 
       .news-date {
@@ -325,14 +335,26 @@ a {
         font-size: 0.72rem;
         font-weight: 600;
         text-transform: uppercase;
+        letter-spacing: 0.04em;
         color: $color-accent;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.25rem;
       }
 
       p {
         font-size: 0.85rem;
         color: $color-text;
-        line-height: 1.45;
+        line-height: 1.48;
+        margin: 0;
+      }
+
+      .news-thumb {
+        display: block;
+        width: 100%;
+        max-height: 150px;
+        object-fit: cover;
+        border-radius: 6px;
+        border: 1px solid $color-border;
+        margin-top: 0.55rem;
       }
     }
   }
