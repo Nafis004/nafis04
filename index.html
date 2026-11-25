@@ -112,7 +112,7 @@ title: Home
   </main>
 
   <!-- RIGHT SIDEBAR (PROFILE CARD + NEWS) -->
-  <<aside class="sidebar-col">
+  <aside class="sidebar-col">
     <!-- Box 1: Profile Card -->
     <div class="profile-card">
       <img src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="{{ site.title }}" class="avatar-circle">
@@ -132,6 +132,24 @@ title: Home
         <li>(2026) B.Sc. Mechanical Engineering, AUST</li>
       </ul>
     </div>
+
+    <!-- Box 2: Separate News Card -->
+    <div class="sidebar-news">
+      <h3>News</h3>
+      <ul class="sidebar-news-list">
+        {% for item in site.data.news %}
+          <li>
+            <span class="news-date">{{ item.date }}</span>
+            <p>{{ item.text }}</p>
+            {% if item.image %}
+              <img src="{{ item.image | relative_url }}" alt="{{ item.date }}" class="news-thumb">
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </aside>
+</div>
 
     <!-- Box 2: Separate News Card -->
     <div class="sidebar-news">
