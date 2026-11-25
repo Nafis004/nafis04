@@ -212,16 +212,35 @@ a {
 }
 /* Right Sidebar (Profile Card + News) */
 /* Right Sidebar (Profile Card + News) */
+/* Right Sidebar (Profile Card + News) */
 .sidebar-col {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-
-  @media (max-width: 820px) {
-    order: -1;
-  }
 }
 
+@media (max-width: 820px) {
+  .main-col,
+  .sidebar-col {
+    display: contents;
+  }
+
+  .profile-card {
+    order: 1;
+  }
+
+  .main-intro-wrap {
+    order: 2;
+  }
+
+  .sidebar-news {
+    order: 3;
+  }
+
+  .main-body-wrap {
+    order: 4;
+  }
+}
 .profile-card {
   background: #ffffff;
   border: 1px solid $color-border;
