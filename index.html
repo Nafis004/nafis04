@@ -4,32 +4,41 @@ title: Home
 ---
 
 ---
-layout: default
----
-
 <div class="container page-two-col">
-  <!-- LEFT COLUMN -->
+  <!-- LEFT COLUMN (keeps Research & Publications inside the left 1fr column) -->
   <div class="main-col">
-    <!-- 1. Introduction Block -->
     <div class="main-intro-wrap">
       <header class="intro-header">
-        <h1>Mohammad Nafis Irfan</h1>
-        <p class="subtitle">Mechanical Engineering, Ahsanullah University of Science and Technology (AUST)</p>
-
-        <div class="pill-tags">
-          <span class="pill-tag">Computational Fluid Dynamics (CFD)</span>
-          <span class="pill-tag">Supersonic Combustion &amp; Scramjets</span>
-          <span class="pill-tag">The Richtmyer–Meshkov instability (RMI)</span>
-          <span class="pill-tag">Aerodynamics</span>
-          <span class="pill-tag">Thermo-Fluid Systems</span>
-          <span class="pill-tag">District Cooling System</span>
-        </div>
-
-        <p class="bio-text">
-          I am a Mechanical Engineering student passionate about <strong>aerospace</strong>, specializing in <strong>aerodynamics</strong>, <strong>propulsion systems</strong>, and <strong>Computational Fluid Dynamics (CFD)</strong>. My current research spans two thermo-fluid and energy systems projects: simulating shock-induced Richtmyer-Meshkov instability (RMI) in supersonic scramjet combustors using OpenFOAM and ANSYS Fluent to evaluate fuel mixing and total pressure recovery, and modeling centralized district cooling networks with stratified thermal energy storage in OpenModelica and MATLAB to optimize plant load-shifting and energy efficiency.
-        </p>
+        <!-- H1, subtitle, pill-tags, bio-text -->
       </header>
     </div>
+
+    <div class="main-body-wrap">
+      <section class="content-section">
+        <h2>
+          Current Thesis &amp; Ongoing Research
+          <a href="{{ '/research/' | relative_url }}" class="section-more">Full research &rarr;</a>
+        </h2>
+        <!-- Your highlight-card items (Scramjet + District Cooling) -->
+      </section>
+
+      <section class="content-section pub-section">
+        <!-- Selected publications -->
+      </section>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDEBAR -->
+  <aside class="sidebar-col">
+    <div class="profile-card">
+      <!-- Profile card -->
+    </div>
+
+    <div class="sidebar-news">
+      <!-- News card -->
+    </div>
+  </aside>
+</div>
 
     <!-- 2. Research & Selected Publications -->
     <div class="main-body-wrap">
