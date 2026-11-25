@@ -126,27 +126,27 @@ a {
 }
 
 /* Left Main Column */
+/* Left Main Column */
 .intro-header {
-  background: #ffffff;
-  border: 1px solid $color-border;
-  border-radius: 12px;
-  padding: 1.75rem 1.85rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 12px rgba(30, 64, 175, 0.04);
-
-  @media (max-width: 650px) {
-    padding: 1.25rem 1.15rem;
-  }
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid $color-border;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0 0 1.85rem 0;
+  margin-bottom: 0;
 
   h1 {
-    font-size: 2.25rem;
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 2.55rem;
     font-weight: 700;
-    letter-spacing: -0.025em;
-    line-height: 1.18;
-    margin-bottom: 0.3rem;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    color: $color-text;
+    margin-bottom: 0.35rem;
 
     @media (max-width: 650px) {
-      font-size: 1.75rem;
+      font-size: 1.95rem;
     }
   }
 
@@ -154,27 +154,29 @@ a {
     font-size: 1.02rem;
     font-style: italic;
     color: $color-muted;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
   }
 
   .pill-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.45rem;
-    margin-bottom: 1.25rem;
+    gap: 0.5rem;
+    margin-bottom: 1.45rem;
   }
 
   .pill-tag {
-    background: $color-surface;
+    background: rgba(30, 64, 175, 0.06);
     color: $color-accent;
-    border: 1px solid $color-accent;
+    border: 1px solid rgba(30, 64, 175, 0.45);
     font-size: 0.78rem;
     font-weight: 500;
-    padding: 0.22rem 0.75rem;
+    padding: 0.28rem 0.85rem;
     border-radius: 999px;
+    transition: all 0.15s ease;
 
     &:hover {
       background: $color-accent;
+      border-color: $color-accent;
       color: #ffffff;
       text-decoration: none;
     }
@@ -182,11 +184,8 @@ a {
 
   .bio-text {
     color: $color-text;
-    margin-bottom: 1.35rem;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    line-height: 1.72;
+    margin-bottom: 0;
   }
 
   .callout-banner {
@@ -195,6 +194,7 @@ a {
     border-left: 4px solid $color-accent;
     border-radius: 6px;
     padding: 0.95rem 1.15rem;
+    margin-top: 1.35rem;
 
     .callout-title {
       font-weight: 600;
@@ -210,7 +210,6 @@ a {
     }
   }
 }
-
 /* Right Sidebar (Profile Card + News) */
 /* Right Sidebar (Profile Card + News) */
 .sidebar-col {
